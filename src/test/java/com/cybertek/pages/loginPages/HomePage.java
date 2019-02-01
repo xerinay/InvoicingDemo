@@ -1,6 +1,5 @@
-package com.cybertek.pages;
+package com.cybertek.pages.loginPages;
 
-import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
 import com.cybertek.utilities.TestBase;
 import org.openqa.selenium.WebElement;

@@ -1,7 +1,7 @@
 package com.cybertek.tests;
 
-import com.cybertek.pages.HomePage;
-import com.cybertek.pages.LogInPage;
+import com.cybertek.pages.loginPages.HomePage;
+import com.cybertek.pages.loginPages.LogInPage;
 import com.cybertek.utilities.TestBase;
 import org.testng.annotations.Test;
 

@@ -1,8 +1,8 @@
 package com.cybertek.utilities;
 
-import com.cybertek.pages.HomePage;
-import com.cybertek.pages.LogInPage;
 import com.cybertek.pages.UserStory_1;
+import com.cybertek.pages.loginPages.HomePage;
+import com.cybertek.pages.loginPages.LogInPage;
 
 public class Constance {
 

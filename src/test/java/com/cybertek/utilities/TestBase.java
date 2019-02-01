@@ -1,8 +1,5 @@
 package com.cybertek.utilities;
 
-import com.cybertek.pages.HomePage;
-import com.cybertek.pages.LogInPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
