@@ -27,13 +27,7 @@ public class TestBase {
         actions = new Actions(driver);
         softAssert = new SoftAssert();
 
-        /*LogInPage logInPage = new LogInPage();
-        logInPage.open();
-        logInPage.login();
-
-        HomePage homePage = new HomePage();
-        BrowserUtils.waitForClickablility(By.xpath("//span[@class='oe_menu_text'][contains(text(),'Invoicing')]"), 10);
-        homePage.invoicingBtn.click();*/
+        Constance.loginToInvoicingModule();
 
 
     }

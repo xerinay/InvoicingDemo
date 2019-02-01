@@ -1,31 +1,25 @@
 package com.cybertek.tests;
 
-import com.cybertek.pages.HomePage;
-import com.cybertek.pages.LogInPage;
 import com.cybertek.pages.UserStory_1;
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.TestBase;
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+import static org.testng.Assert.assertTrue;
 
 public class UserStory_1_Test extends TestBase {
 
     @Test
     public void filter_1() {
-        LogInPage logInPage = new LogInPage();
-        logInPage.open();
-        logInPage.login();
+       UserStory_1 userStory_1 = new UserStory_1();
+       if (userStory_1.searchMagnificationBtn.isEnabled()){
+           userStory_1.searchMagnificationBtn.click();
+       }
 
-        HomePage homePage = new HomePage();
-        BrowserUtils.waitForClickablility(By.xpath("//span[@class='oe_menu_text'][contains(text(),'Invoicing')]"), 10);
-        homePage.invoicingBtn.click();
+       userStory_1.filterBtn.click();
 
-        UserStory_1 userStory_1 = new UserStory_1();
+       BrowserUtils.wait(10);
 
-        userStory_1.searchMagnificationBtn.click();
-        userStory_1.filterBtn.click();
-
-        BrowserUtils.wait(5);
-
+       assertTrue(userStory_1.draft_btn.isDisplayed());
+       assertTrue(userStory_1.open_btn.isDisplayed());
     }
 }
