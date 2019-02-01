@@ -13,31 +13,32 @@ public class LogInPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//a[contains(text(),'BriteErpDemo')]")
-    public WebElement DemoSelector;
+    public @FindBy(xpath = "//a[contains(text(),'BriteErpDemo')]")
+    WebElement DemoSelector;
 
-    @FindBy(id = "login")
-    public WebElement userName;
+    public @FindBy(id = "login")
+    WebElement userName;
 
-    @FindBy(id = "password")
-    public WebElement passWord;
+    public @FindBy(id = "password")
+    WebElement passWord;
 
-    @FindBy(xpath = "//b[contains(text(),'Sign in')]")
-    public WebElement signinBtn;
+    public @FindBy(xpath = "//b[contains(text(),'Sign in')]")
+    WebElement signinBtn;
 
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement logInBtn;
+    public @FindBy(xpath = "//button[@type='submit']")
+    WebElement logInBtn;
 
-    public void login(){
+
+    public void login() {
 
         signinBtn.click();
-        this.userName.sendKeys(ConfigurationReader.getProperty("username"));
-        this.passWord.sendKeys(ConfigurationReader.getProperty("password"));
+        userName.sendKeys(ConfigurationReader.getProperty("username"));
+        passWord.sendKeys(ConfigurationReader.getProperty("password"));
         logInBtn.click();
 
     }
 
-    public void open(){
+    public void open() {
 
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         DemoSelector.click();

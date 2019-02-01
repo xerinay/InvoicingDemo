@@ -1,5 +1,8 @@
 package com.cybertek.utilities;
 
+import com.cybertek.pages.HomePage;
+import com.cybertek.pages.LogInPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
@@ -13,7 +16,7 @@ public class TestBase {
     protected WebDriver driver;
     protected Actions actions;
     protected SoftAssert softAssert;
-    protected Pages pages;
+
 
     @BeforeMethod
     public void setUpMethod() {
@@ -23,7 +26,15 @@ public class TestBase {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         actions = new Actions(driver);
         softAssert = new SoftAssert();
-        pages = new Pages();
+
+        /*LogInPage logInPage = new LogInPage();
+        logInPage.open();
+        logInPage.login();
+
+        HomePage homePage = new HomePage();
+        BrowserUtils.waitForClickablility(By.xpath("//span[@class='oe_menu_text'][contains(text(),'Invoicing')]"), 10);
+        homePage.invoicingBtn.click();*/
+
 
     }
 
