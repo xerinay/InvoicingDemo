@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 public class UserStory_1 {
 
 
-
     public UserStory_1() {
 
         PageFactory.initElements(Driver.getDriver(), this);
@@ -17,7 +16,7 @@ public class UserStory_1 {
     @FindBy(xpath = "//span[@title='Advanced Search...']")
     public WebElement searchMagnificationBtn;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/button")
+    @FindBy(xpath = "//body[@class='o_web_client']/div[@class='o_main']/div[@class='o_main_content']/div[@class='o_control_panel']/div[@class='o_cp_right']/div[@class='btn-group o_search_options']/div[1]/button[1]")
     public WebElement filterBtn;
 
     @FindBy(xpath = "//span[contains(text(),'Customer Invoices')]")
@@ -28,10 +27,6 @@ public class UserStory_1 {
 
     @FindBy(xpath = "//a[contains(text(),'Open')]")
     public WebElement open_btn;
-
-
-
-
 
 
 }
