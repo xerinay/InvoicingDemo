@@ -15,4 +15,8 @@ public class UserStory_5 {
 
     @FindBy(xpath = "//tbody[@class='ui-sortable']//tr[1]//td[2]")
     public WebElement clickOnName;
+
+    @FindBy(xpath = "//tbody[@class='ui-sortable']//tr[1]//td[2]")
+    public WebElement enterANumber;
+
 }
